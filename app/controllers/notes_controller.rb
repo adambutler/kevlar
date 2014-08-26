@@ -2,9 +2,13 @@ class NotesController < ApplicationController
 
   def show
     @note = Note.where({ uuid: params[:note_uuid] }).first
-    @note.destroy!
-    unless @note
-      render text: "Note can not be found", status: :not_found
+    if @note
+      @note.destroy!
+      unless @note
+        render text: "Note can not be found", status: :not_found
+      end
+    else
+      render '404'
     end
   end
 
@@ -16,8 +20,7 @@ class NotesController < ApplicationController
     @note = Note.new(note_params)
     @note.uuid = SecureRandom.urlsafe_base64(nil, false)
     if @note.save
-      # redirect_to "/#{@note.uuid}", notice: 'Note was successfully created.'
-      render text: "http://secret.dev/#{@note.uuid}"
+      render "link"
     else
       render action: "new"
     end

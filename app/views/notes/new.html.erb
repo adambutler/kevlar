@@ -1,9 +1,10 @@
 <%= form_for(@note) do |f| %>
   <div class="field">
-    <%= f.label :message %><br />
-    <%= f.text_field :message %>
+    <%= f.text_field :message, placeholder: "Write your secret here", autocomplete: "off" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Secret" %>
   </div>
 <% end %>
+
+<p>Secrets created by kevlar.io are kept until they are accessed, they are then deleted permanently from the server.</p>

@@ -1,3 +1,53 @@
-// Place all the styles related to the note controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$stone: #34495e;
+$golden-width: 61.8%;
+
+body {
+  font-size: 4em;
+}
+
+body, input  {
+  font-family: 'Exo', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  color: $stone;
+}
+
+h2 {
+  font-size: 0.5em;
+}
+
+h3 {
+  font-size: 0.6em;
+}
+
+h2, h3 {
+  padding: 15px 0;
+  display: block;
+  max-width: $golden-width;
+  margin: auto;
+}
+
+p {
+  position: absolute;
+  right: 0; bottom: 0; left: 0;
+  line-height: 80px;
+  font-size: 0.3em;
+}
+
+input {
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+}
+
+input[type=text] {
+  width: $golden-width;
+  font-size: 0.5em;
+  border: 2px solid #ccc;
+}
+
+input[type=submit] {
+  font-size: 0.4em;
+  color: #fff;
+  background: #f39c12;
+}
