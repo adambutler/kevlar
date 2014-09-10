@@ -4,9 +4,6 @@ class NotesController < ApplicationController
     @note = Note.where({ uuid: params[:note_uuid] }).first
     if @note
       @note.destroy!
-      unless @note
-        render text: "Note can not be found", status: :not_found
-      end
     else
       render '404'
     end
