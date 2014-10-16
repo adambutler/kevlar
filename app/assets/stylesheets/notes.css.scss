@@ -3,6 +3,7 @@ $golden-width: 61.8%;
 
 body {
   font-size: 4em;
+  padding-bottom: 100px;
 }
 
 body, input  {
@@ -12,12 +13,20 @@ body, input  {
   color: $stone;
 }
 
+h1 {
+  font-size: 20vw;
+  @media all and (min-width: 960px) {
+    font-size: 192px;
+  }
+}
+
 h2 {
   font-size: 0.5em;
 }
 
 h3 {
   font-size: 0.6em;
+  font-size: 3vw;
 }
 
 h2, h3 {
@@ -25,12 +34,21 @@ h2, h3 {
   display: block;
   max-width: $golden-width;
   margin: auto;
+  @media all and (max-width: 767px) {
+    max-width: none;
+  }
 }
 
-p {
-  position: absolute;
+a {
+  color: #2b85c1;
+  text-decoration: none;
+}
+
+.footer {
+  background: #fff;
+  position: fixed;
   right: 0; bottom: 0; left: 0;
-  line-height: 80px;
+  padding: 10px;
   font-size: 0.3em;
 }
 
@@ -43,10 +61,12 @@ input {
 input[type=text] {
   width: $golden-width;
   font-size: 0.5em;
+  font-size: 3vw;
   border: 2px solid #ccc;
 }
 
 input[type=submit] {
+  -webkit-appearance: none;
   font-size: 0.4em;
   color: #fff;
   background: #f39c12;

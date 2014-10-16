@@ -1,3 +1,7 @@
 <h2>Share this secret by sending this URL with a friend. <b>Once the link has been visited it will never work again</b>.</h2>
-<h3><%= request.protocol %><%= request.host %>/<%= @note.uuid %></h3>
+<h3>
+  <a href="<%= request.protocol %><%= request.host %>/<%= @note.uuid %>">
+    <%= request.protocol %><%= request.host %>/<%= @note.uuid %>
+  </a>
+</h3>
 
