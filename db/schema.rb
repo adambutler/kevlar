@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(version: 20141018200347) do
 
   create_table "notes", force: true do |t|
-    t.string   "message"
     t.integer  "reads_remaining"
     t.string   "uuid"
     t.datetime "created_at"
