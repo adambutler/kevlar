@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140826132820) do
+ActiveRecord::Schema.define(version: 20141018200347) do
 
   create_table "notes", force: true do |t|
-    t.string   "message"
     t.integer  "reads_remaining"
     t.string   "uuid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "message_encrypted"
   end
 
 end

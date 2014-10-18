@@ -22,7 +22,10 @@ $ cd kevlar
 $ bundle install
 $ rake db:create
 $ rake db:migrate
+$ cp .env.example .env
 ```
+
+Modify the `.env` file to set your own secret used to encrypt secrets.
 
 ## Contributing
 
