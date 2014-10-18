@@ -1,6 +1,6 @@
 class AddEncryptedMessageToNote < ActiveRecord::Migration
   def up
-    add_column :notes, :message_encrypted, :string
+    add_column :notes, :message_encrypted, :text
     encrypt_notes
     remove_column :notes, :message, :string
   end
