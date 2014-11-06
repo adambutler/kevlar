@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20141018200347) do
     t.string   "uuid"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "message_encrypted"
+    t.text     "message_encrypted"
   end
 
 end
