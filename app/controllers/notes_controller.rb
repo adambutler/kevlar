@@ -1,7 +1,11 @@
 class NotesController < ApplicationController
 
   def show
-    @note = Note.where({ uuid: params[:note_uuid] }).first
+    @note = Note.where({ uuid: params[:id] }).first
+  end
+
+  def reveal
+    @note = Note.where({ uuid: params[:note_id] }).first
     if @note
       @note.destroy!
     else
